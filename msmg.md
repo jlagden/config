@@ -10,6 +10,15 @@
   * [Y] to mount Window Setup Boot Image
   * [Y] to mount Windows Recovery Image
 * [4] Remove 
-  * [1] Remove Default Metro Apps 
+ * [1] Remove Default Metro Apps 
     * [6] All apps except store app
+ * [3] Remove Windows Components
+  * [A]   Microsoft Connect App
+  * [B]   Microsoft OneDrive Desktop Client
+  * [C]   Microsoft Skype ORTC
+  * [D]   Windows Content Delivery Manager
+  * [F]   Windows Embedded Features
+  * [H]   Windows Mixed Reality
+  * [I]   Windows Quick Assist App
+  * [J]   Windows Take Test App
 ~~~~
