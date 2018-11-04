@@ -2,3 +2,4 @@
 * Copy contents to DVD Folder
 * [2] (Convert) -> [2] Convert ESD Image to WIM Image
 * Select Architecture
+* [1] (Source) -> [1] (Select source from DVD folder)
