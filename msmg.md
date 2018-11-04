@@ -6,3 +6,4 @@
 * Select image number
 * [Y] to mount Window Setup Boot Image
 * [Y] to mount Windows Recovery Image
+* [4] Remove [1] Remove Default Metro Apps [6] All apps except store app
