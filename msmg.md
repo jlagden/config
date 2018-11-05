@@ -2,17 +2,17 @@
 
 * Mount Windows ISO
 * Copy contents to DVD Folder
-* [2] Convert 
-  * [2] Convert ESD Image to WIM Image
+* __[2]__ Convert 
+  * __[2]__ Convert ESD Image to WIM Image
   * Select Architecture
-* [1] Source
-  * [1] Select source from DVD folder
+* __[1]__ Source
+  * __[1]__ Select source from DVD folder
   * Select image number
-  * [Y] to mount Window Setup Boot Image
-  * [Y] to mount Windows Recovery Image
-* [4] Remove 
-  * [1] Remove Default Metro Apps 
-    * [6] All apps except store app
+  * __[Y]__ to mount Window Setup Boot Image
+  * __[Y]__ to mount Windows Recovery Image
+* __[4]__ Remove 
+  * __[1]__ Remove Default Metro Apps 
+    * __[6]__ All apps except store app
   * [3] Remove Windows Components
     * [A]   Microsoft Connect App
     * [B]   Microsoft OneDrive Desktop Client
