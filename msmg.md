@@ -24,9 +24,12 @@
     * __[H]__   Windows Mixed Reality
     * __[I]__   Windows Quick Assist App
     * __[J]__   Windows Take Test App
-    * __[2]__
+    * __[2]__   Advanced Windows Components
       * __[E]__   Windows Cortana & StartMenu Search App
       * __[G]__   Windows Media Player
       * __[L]__   Microsoft Telemetry
       * __[N]__   Windows People Experience Host
       * __[O]__   Windows SmartScreen
+  * __[5]__ Customize
+    * __[5]__ Apply Tweaks
+      * __[1]__ Disable Cortana App
