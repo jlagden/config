@@ -1,0 +1,26 @@
+virtualbox
+youtube-dl
+wireshark
+windirstat
+totalcommander
+cmder
+openvpn?
+sql-server-express?
+rufus
+cpu-z.install
+pidgin?
+lockhunter
+mp3tag
+pstools
+checksum?
+kodi?
+gpu-z?
+deluge
+ddu
+xming
+win32diskimager.install 
+keepassxc
+infra recorder
+signal
+hashtab?
+duckieTV
