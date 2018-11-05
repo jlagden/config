@@ -13,18 +13,18 @@
 * __[4]__ Remove 
   * __[1]__ Remove Default Metro Apps 
     * __[6]__ All apps except store app
-  * [3] Remove Windows Components
-    * [A]   Microsoft Connect App
-    * [B]   Microsoft OneDrive Desktop Client
-    * [C]   Microsoft Skype ORTC
-    * [D]   Windows Content Delivery Manager
-    * [F]   Windows Embedded Features
-    * [H]   Windows Mixed Reality
-    * [I]   Windows Quick Assist App
-    * [J]   Windows Take Test App
-    * [2]
-      * [E]   Windows Cortana & StartMenu Search App
-      * [G]   Windows Media Player
-      * [L]   Microsoft Telemetry
-      * [N]   Windows People Experience Host
-      * [O]   Windows SmartScreen
+  * __[3]__ Remove Windows Components
+    * __[A]__   Microsoft Connect App
+    * __[B]__   Microsoft OneDrive Desktop Client
+    * __[C]__   Microsoft Skype ORTC
+    * __[D]__   Windows Content Delivery Manager
+    * __[F]__   Windows Embedded Features
+    * __[H]__   Windows Mixed Reality
+    * __[I]__   Windows Quick Assist App
+    * __[J]__   Windows Take Test App
+    * __[2]__
+      * __[E]__   Windows Cortana & StartMenu Search App
+      * __[G]__   Windows Media Player
+      * __[L]__   Microsoft Telemetry
+      * __[N]__   Windows People Experience Host
+      * __[O]__   Windows SmartScreen
