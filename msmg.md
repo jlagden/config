@@ -20,7 +20,6 @@
     * [H]   Windows Mixed Reality
     * [I]   Windows Quick Assist App
     * [J]   Windows Take Test App
-    
     * [2]
       * [E]   Windows Cortana & StartMenu Search App
       * [G]   Windows Media Player
