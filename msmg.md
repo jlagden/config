@@ -1,5 +1,6 @@
-## MSMG Options and procedure to build Windows 10 ISO
+## MSMG options and procedure to build Windows 10 ISO
 
+* Download Media Creation Tool https://www.microsoft.com/en-gb/software-download/windows10 and create Windows ISO
 * Mount Windows ISO
 * Copy contents to DVD Folder
 * __[2]__ Convert 
