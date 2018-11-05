@@ -1,4 +1,4 @@
-**MSMG Options and procedure to build Windows 10 ISO**
+## MSMG Options and procedure to build Windows 10 ISO
 
 * Mount Windows ISO
 * Copy contents to DVD Folder
