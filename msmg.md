@@ -1,8 +1,9 @@
 ## MSMG options and procedure to build Windows 10 ISO
 
-* Download Media Creation Tool https://www.microsoft.com/en-gb/software-download/windows10 and create Windows ISO
+* Download [Media Creation Tool](https://www.microsoft.com/en-gb/software-download/windows10) and create Windows ISO
 * Mount Windows ISO
 * Copy contents to DVD Folder
+* Start MSMG (right click Start "Run as Administrator")
 * __[2]__ Convert 
   * __[2]__ Convert ESD Image to WIM Image
   * Select Architecture
