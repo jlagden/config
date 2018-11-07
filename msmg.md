@@ -33,3 +33,4 @@
   * __[5]__ Customize
     * __[5]__ Apply Tweaks
       * __[1]__ Disable Cortana App
+  * __[7]__ Make a DVD ISO Image
