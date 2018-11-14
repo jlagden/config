@@ -1,0 +1,22 @@
+Windows Registry Editor Version 5.00
+
+; System -> Notification and Actions -> Notifications
+
+; Show me the Windows welcome experience after updates and
+; occasionally when I sign in to highlight what's new and suggested
+; OFF
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager]
+"SubscribedContent-310093Enabled"=dword:00000000
+
+; Get tips, tricks, and suggestions as you use Windows
+; OFF
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager]
+"SubscribedContent-338389Enabled"=dword:00000000
+
+; Get notifications from apps and other senders
+; OFF
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\PushNotifications]
+"ToastEnabled"=dword:00000000
