@@ -1,8 +1,8 @@
 **Useful Links**
 
-https://docs.microsoft.com/en-gb/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services
-https://getadmx.com/
-https://www.windows-security.org
+* https://docs.microsoft.com/en-gb/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services
+* https://getadmx.com/
+* https://www.windows-security.org
 
 **Windows Settings**
 
