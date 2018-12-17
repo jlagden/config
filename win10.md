@@ -171,15 +171,18 @@ Settings -> Update & Security -> For Developers
 
 File Explorer - APPLY
 
-
+```
 install_wim_tweak /o /c Microsoft-Windows-ContentDeliveryManager /r
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\AppHost" /v "EnableWebContentEvaluation" /t REG_DWORD /d 0 /f
 reg add "HKLM\SOFTWARE\Policies\Microsoft\PushToInstall" /v DisablePushToInstall /t REG_DWORD /d 1 /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v SilentInstalledAppsEnabled /t REG_DWORD /d 0 /f
 sc delete PushToInstall
+```
 
+```
 Get-AppxPackage -AllUsers *zune* | Remove-AppxPackage
 Get-AppxPackage -AllUsers *xbox* | Remove-AppxPackage
+```
 
 ```
 sc delete XblAuthManager
@@ -209,7 +212,13 @@ Get-AppxPackage -AllUsers *mess* | Remove-AppxPackage
 Get-AppxPackage -AllUsers *onenote* | Remove-AppxPackage
 Get-AppxPackage -AllUsers *photo* | Remove-AppxPackage
 Get-AppxPackage -AllUsers *camera* | Remove-AppxPackage
-Get-AppxPackage -AllUsers *bing* | Remove-AppxPackage
+
+**Remove News, Weather, Money, Sports App**
+
+`Get-AppxPackage -AllUsers *bing* | Remove-AppxPackage`
+
+**Remove Calculator App**
+
 Get-AppxPackage -AllUsers *calc* | Remove-AppxPackage
 Get-AppxPackage -AllUsers *soundrec* | Remove-AppxPackage
 
@@ -298,11 +307,16 @@ for /f "tokens=1" %I in ('reg query "HKLM\SYSTEM\CurrentControlSet\Services" /k 
 for /f "tokens=1" %I in ('reg query "HKLM\SYSTEM\CurrentControlSet\Services" /k /f "BcastDVRUserService" ^| find /i "BcastDVRUserService"') do (reg delete %I /f)
 
 sc delete diagnosticshub.standardcollector.service
+```
 
+**Change how frequently Windows should ask for my feedback to Never**
+
+```
 reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Siuf\Rules" /v "NumberOfSIUFInPeriod" /t REG_DWORD /d 0 /f
 reg delete "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Siuf\Rules" /v "PeriodInNanoSeconds" /f
-reg add "HKLM\SYSTEM\ControlSet001\Control\WMI\AutoLogger\AutoLogger-Diagtrack-Listener" /v Start /t REG_DWORD /d 0 /f
 ```
+reg add "HKLM\SYSTEM\ControlSet001\Control\WMI\AutoLogger\AutoLogger-Diagtrack-Listener" /v Start /t REG_DWORD /d 0 /f
+
 
 **Turn off Application Telementry** [Link](https://www.windows-security.org/13372c6a0a2d392443dc146ceb94d720/turn-off-application-telemetry)
 
