@@ -6,9 +6,9 @@
 
 **Windows Settings**
 
-* System 
-  * Notifications and Actions
-    * Notifications 
+* **System** 
+  * **Notifications and Actions**
+    * **Notifications** 
       * Show me the Windows welcome experience after updates and occasionally when I sign in to highlight what's new and suggested **OFF**
       * Get tips, tricks and suggestions as you use Windows **OFF**
   * Multitasking
