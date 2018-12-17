@@ -11,13 +11,12 @@
     * **Notifications** 
       * Show me the Windows welcome experience after updates and occasionally when I sign in to highlight what's new and suggested **OFF**
       * Get tips, tricks and suggestions as you use Windows **OFF**
-  * Multitasking
-    * Timeline
+  * **Multitasking**
+    * **Timeline**
       * Show suggestions occasionally in Timeline **OFF**
-
-System -> Shared experiences -> Share across devices
-
-* Let apps on other devices (including linked phones and tablets) open and message apps on this device, and vice versa **OFF**
+  * **Shared experiences**
+    * **Share across devices**
+      * Let apps on other devices (including linked phones and tablets) open and message apps on this device, and vice versa **OFF**
 
 Devices -> Bluetooth amd other
 
