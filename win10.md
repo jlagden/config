@@ -293,6 +293,9 @@ sc delete diagnosticshub.standardcollector.service
 reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Siuf\Rules" /v "NumberOfSIUFInPeriod" /t REG_DWORD /d 0 /f
 reg delete "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Siuf\Rules" /v "PeriodInNanoSeconds" /f
 reg add "HKLM\SYSTEM\ControlSet001\Control\WMI\AutoLogger\AutoLogger-Diagtrack-Listener" /v Start /t REG_DWORD /d 0 /f
+
+**Turn off Application Telementry** [Link](https://www.windows-security.org/13372c6a0a2d392443dc146ceb94d720/turn-off-application-telemetry)
+
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\AppCompat" /v AITEnable /t REG_DWORD /d 0 /f
 
 **Turn off Inventory Collector** [Link](https://www.windows-security.org/8cb262cbd4b94fb7d3ec810760e83587/turn-off-inventory-collector)
