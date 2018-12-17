@@ -182,6 +182,7 @@ sc delete PushToInstall
 Get-AppxPackage -AllUsers *zune* | Remove-AppxPackage
 Get-AppxPackage -AllUsers *xbox* | Remove-AppxPackage
 
+```
 sc delete XblAuthManager
 sc delete XblGameSave
 sc delete XboxNetApiSvc
@@ -190,6 +191,7 @@ reg delete "HKLM\SYSTEM\CurrentControlSet\Services\xbgm" /f
 schtasks /Change /TN "Microsoft\XblGameSave\XblGameSaveTask" /disable
 schtasks /Change /TN "Microsoft\XblGameSave\XblGameSaveTaskLogon" /disable
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\GameDVR" /v AllowGameDVR /t REG_DWORD /d 0 /f
+```
 
 Get-AppxPackage -AllUsers *sticky* | Remove-AppxPackage
 
@@ -274,6 +276,8 @@ del /Q /F "%localappdata%\Microsoft\OneDrive\OneDriveStandaloneUpdater.exe"
 
 Removing Telemetry and other unnecessary services
 In the command prompt, type the following commands: 
+
+```
 sc delete DiagTrack
 sc delete dmwappushservice
 sc delete WerSvc
@@ -299,6 +303,7 @@ sc delete diagnosticshub.standardcollector.service
 reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Siuf\Rules" /v "NumberOfSIUFInPeriod" /t REG_DWORD /d 0 /f
 reg delete "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Siuf\Rules" /v "PeriodInNanoSeconds" /f
 reg add "HKLM\SYSTEM\ControlSet001\Control\WMI\AutoLogger\AutoLogger-Diagtrack-Listener" /v Start /t REG_DWORD /d 0 /f
+```
 
 **Turn off Application Telementry** [Link](https://www.windows-security.org/13372c6a0a2d392443dc146ceb94d720/turn-off-application-telemetry)
 
