@@ -11,10 +11,9 @@
     * Notifications 
       * Show me the Windows welcome experience after updates and occasionally when I sign in to highlight what's new and suggested **OFF**
       * Get tips, tricks and suggestions as you use Windows **OFF**
-
-System -> Multitasking -> Timeline
-
-* Show suggestions occasionally in Timeline **OFF**
+  * Multitasking
+    * Timeline
+      * Show suggestions occasionally in Timeline **OFF**
 
 System -> Shared experiences -> Share across devices
 
