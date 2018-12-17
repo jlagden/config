@@ -1,8 +1,8 @@
-Turn off
+**Windows Settings**
 
 System -> Notifications and Actions 
 
-* Welcome experiemce
+* Show me the Windows welcome experience after updates and occasionally when I sign in to highlight what's new and suggested **OFF**
 * Tips and Tricks
 
 System -> Multitasking
