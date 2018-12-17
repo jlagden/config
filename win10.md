@@ -6,18 +6,18 @@
 
 **Windows Settings**
 
-System -> Notifications and Actions 
+System -> Notifications and Actions -> Notifications 
 
 * Show me the Windows welcome experience after updates and occasionally when I sign in to highlight what's new and suggested **OFF**
-* Tips and Tricks
+* Get tips, tricks and suggestions as you use Windows **OFF**
 
-System -> Multitasking
+System -> Multitasking -> Timeline
 
-* Timeline
+* Show suggestions occasionally in Timeline **OFF**
 
-System -> Shared experiences
+System -> Shared experiences -> Share across devices
 
-* Share across devices
+* Let apps on other devices (including linked phones and tablets) open and message apps on this device, and vice versa **OFF**
 
 Devices -> Bluetooth amd other
 
