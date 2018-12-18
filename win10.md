@@ -31,11 +31,10 @@
   * **Autoplay**
     * **Autoplay**
       * Use AutoPlay for all media and devices
-
-
-Network & Internet -> Wifi
-
-* Let me use Online Sign-up to get connected
+* **Network & Internet**
+  * **Wifi**
+    * **Hotspot 2.0 Networks**
+      * Let me use Online Sign-up to get connected **OFF**
 
 Network & Internet -> Mobile Hotspot
 
