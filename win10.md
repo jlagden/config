@@ -19,27 +19,19 @@
   * **Shared experiences**
     * **Share across devices**
       * Let apps on other devices (including linked phones and tablets) open and message apps on this device, and vice versa **OFF**
+* **Devices**
+  * **Typing**
+    * **Spelling**
+      * Auto correct mispelt words **OFF**
+      * Highlight mispelt words **OFF**
+    * **Typing**
+      * Show text suggestions as I type on software keyboard **OFF**
+      * Add a space after I choose a text suggestion **OFF**
+      * add a full stop after I double tap the spacebar **OFF**
+  * **Autoplay**
+    * **Autoplay**
+      * Use AutoPlay for all media and devices
 
-Devices -> Bluetooth amd other
-
-* bluetooth
-
-Devices -> Typing
-
-Spelling
-
-* Auto correct mispelt words
-* highlight mispelt words
-
-Typing
-
-* Show text suggestions as I type on software keyboard
-* Add a space after I choose a text suggestion
-* add a full stop after I double tap the spacebar
-
-Devices -> autoplay
-
-* autoplay
 
 Network & Internet -> Wifi
 
