@@ -6,6 +6,9 @@
 * https://www.windows-security.org
 * https://blog.danic.net/how-windows-10-pro-installs-unwanted-apps-candy-crush-and-how-you-stop-it/
 * https://www.stigviewer.com/stig/windows_10/
+* https://github.com/beerisgood/Windows10_Anti-Telemetry
+* https://github.com/SeregaSPb/Windows-10-batch-optimizer
+* https://github.com/RedAndBlueEraser/windows-10-enhance-2
 
 **Windows Settings**
 
