@@ -183,7 +183,6 @@ Disable Push to Install
 
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v SilentInstalledAppsEnabled /t REG_DWORD /d 0 /f
 sc delete PushToInstall
-```
 
 ```
 Get-AppxPackage -AllUsers *zune* | Remove-AppxPackage
