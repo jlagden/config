@@ -168,10 +168,19 @@ Settings -> Update & Security -> For Developers
 
 File Explorer - APPLY
 
-```
-install_wim_tweak /o /c Microsoft-Windows-ContentDeliveryManager /r
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\AppHost" /v "EnableWebContentEvaluation" /t REG_DWORD /d 0 /f
-reg add "HKLM\SOFTWARE\Policies\Microsoft\PushToInstall" /v DisablePushToInstall /t REG_DWORD /d 1 /f
+Remove Content Delivery Manager (Spotlight and App Suggestions)
+
+`install_wim_tweak /o /c Microsoft-Windows-ContentDeliveryManager /r`
+
+Turn Off SmartScreen for Windows Store Apps 
+
+`reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\AppHost" /v "EnableWebContentEvaluation" /t REG_DWORD /d 0 /f`
+
+Disable Push to Install
+
+`reg add "HKLM\SOFTWARE\Policies\Microsoft\PushToInstall" /v DisablePushToInstall /t REG_DWORD /d 1 /f`
+
+
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v SilentInstalledAppsEnabled /t REG_DWORD /d 0 /f
 sc delete PushToInstall
 ```
