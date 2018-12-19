@@ -5,6 +5,7 @@
 * https://getadmx.com/
 * https://www.windows-security.org
 * https://blog.danic.net/how-windows-10-pro-installs-unwanted-apps-candy-crush-and-how-you-stop-it/
+* https://www.stigviewer.com/stig/windows_10/
 
 **Windows Settings**
 
