@@ -331,19 +331,15 @@ reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\AppCompat" /v AI
 
 `reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\AppCompat" /v DisableUAR /t REG_DWORD /d 1 /f`
 
+***
+
 **Turn off windows defender smart screen**
-
-`reg add "HKLM\SOFTWARE\Policies\Microsoft\MicrosoftEdge\PhishingFilter" /v "EnabledV9" /t REG_DWORD /d 0 /f` 
-
-**Turn off smart screen for all users**
 
 `reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "EnableSmartScreen" /t REG_DWORD /d 0 /f` 
 
-Create a REG_DWORD registry setting named EnableSmartScreen in HKEY_LOCAL_MACHINE\Sofware\Policies\Microsoft\Windows\System with a value of 0 (zero).
--and-
-Create a REG_DWORD registry setting named ConfigureAppInstallControlEnabled in HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\SmartScreen with a value of 1.
--and-
-Create a SZ registry setting named ConfigureAppInstallControl in HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\SmartScreen with a value of Anywhere.
+**Turn off Edge smart screen filter**
+
+`reg add "HKLM\SOFTWARE\Policies\Microsoft\MicrosoftEdge\PhishingFilter" /v "EnabledV9" /t REG_DWORD /d 0 /f` 
 
 **Turn off Internet Explorer smart screen filter**
 
