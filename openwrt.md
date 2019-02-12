@@ -11,3 +11,4 @@
   * https://openwrt.org/docs/guide-user/perf_and_log/statistic.rrdcollect
   * https://openwrt.org/docs/guide-user/perf_and_log/statistic.rrdtool
   * https://openwrt.org/docs/guide-user/perf_and_log/statistical.data.overview
+* https://github.com/apollo-ng/luci-theme-darkmatter
