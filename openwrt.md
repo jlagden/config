@@ -35,7 +35,13 @@
 	option 'limit'	'150'
 	option 'leasetime'	'2h'
 	option 'dhcp_option'	'6,208.67.222.123,208.67.220.123'
-  
+  ```
+  * Configure static leases
+  ```
+  config host
+        option ip       '192.168.1.2'
+        option mac      '00:11:22:33:44:55'
+        option name     'mypc'
   ```
 * Upstream DNS Servers
   * LAN- Clodufare - 1.1.1.1, 1.0.0.1
