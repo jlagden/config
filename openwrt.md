@@ -27,6 +27,7 @@
 	option 'start'	'100'
 	option 'limit'	'150'
 	option 'leasetime'	'12h'
+	option 'dhcpoption'	'6,192.168.1.2,192.168.1.1'
 	
   config 'dhcp' 'guest'
 	option 'interface'	'guest'
