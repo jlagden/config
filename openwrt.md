@@ -21,6 +21,7 @@
 	  option resolvfile	 '/tmp/resolv.conf.auto'
   ```
   * DHCP Pools - Remove ra and dhcpv6 options
+  
   ```
   config 'dhcp' 'lan'
 	option 'interface'	'lan'
