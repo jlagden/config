@@ -24,14 +24,14 @@
   ```
   config 'dhcp' 'lan'
 	option 'interface'	'lan'
-	option 'start'		'100'
-	option 'limit'		'150'
+	option 'start'	'100'
+	option 'limit'	'150'
 	option 'leasetime'	'12h'
 	
   config 'dhcp' 'guest'
 	option 'interface'	'guest'
-	option 'start'		'100'
-	option 'limit'		'150'
+	option 'start'	'100'
+	option 'limit'	'150'
 	option 'leasetime'	'2h'
   
   ```
