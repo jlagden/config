@@ -20,6 +20,21 @@
 	  option leasefile	 '/tmp/dhcp.leases'
 	  option resolvfile	 '/tmp/resolv.conf.auto'
   ```
+  * DHCP Pools - Remove ra and dhcpv6 options
+  ```
+  config 'dhcp' 'lan'
+	option 'interface'   'lan'
+	option 'start'       '100'
+	option 'limit'	     '150'
+	option 'leasetime'   '12h'
+	
+  config 'dhcp' 'guest'
+	option 'interface'   'guest'
+	option 'start'       '100'
+	option 'limit'	     '150'
+	option 'leasetime'   '2h'
+  
+  ```
   * Edit dhcp options to return pihole as DNS server 6,192.168.1.2,192.168.1.1
 * Upstream DNS Servers
   * LAN- Clodufare - 1.1.1.1, 1.0.0.1
