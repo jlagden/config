@@ -24,22 +24,22 @@
   ```
   config dhcp 'lan'
 	option interface	'lan'
-	option start	'100'
-	option limit	'150'
+	option start		'100'
+	option limit		'150'
 	option leasetime	'12h'
 	list   dhcp_option	'6,192.168.1.2,192.168.1.1'
 	
   config dhcp 'guest'
 	option interface	'guest'
-	option start	'100'
-	option limit	'150'
+	option start		'100'
+	option limit		'150'
 	option leasetime	'2h'
 	list   dhcp_option	'6,208.67.222.123,208.67.220.123'
   ```
   * Configure static leases
   ```
   config host
-        option ip       '192.168.1.2'
+        option ip       '192.168.1.3'
         option mac      '00:11:22:33:44:55'
         option name     'mypc'
   ```
