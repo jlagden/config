@@ -27,13 +27,14 @@
 	option 'start'	'100'
 	option 'limit'	'150'
 	option 'leasetime'	'12h'
-	option 'dhcpoption'	'6,192.168.1.2,192.168.1.1'
+	option 'dhcp_option'	'6,192.168.1.2,192.168.1.1'
 	
   config 'dhcp' 'guest'
 	option 'interface'	'guest'
 	option 'start'	'100'
 	option 'limit'	'150'
 	option 'leasetime'	'2h'
+	option 'dhcp_option'	'6,208.67.222.123,208.67.220.123'
   
   ```
   * Edit dhcp options to return pihole as DNS server 6,192.168.1.2,192.168.1.1
