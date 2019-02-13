@@ -1,6 +1,6 @@
 * Reduce transmit power on wireless networks
 * https://openwrt.org/docs/guide-user/dns-request-hijacking
-* **DHCP**
+* DHCP
   * Main dhcp options can be left as default:
   ```
   config 'dnsmasq'
@@ -54,3 +54,26 @@
   * https://openwrt.org/docs/guide-user/perf_and_log/statistic.rrdtool
   * https://openwrt.org/docs/guide-user/perf_and_log/statistical.data.overview
 * https://github.com/apollo-ng/luci-theme-darkmatter
+* Guest WiFI
+  * /etc/config/firewall settings
+  ```
+  # Allow DNS Guest -> Router
+  # Client DNS queries originate from dynamic UDP ports (>1023) 
+  config rule
+    option name 'Guest DNS'
+    option src 'guest'
+    option dest_port '53'
+    option proto 'tcp udp'
+    option target 'ACCEPT'
+    
+  # Allow DHCP Guest -> Router
+  # DHCP communication uses UDP ports 67-68
+  config rule
+    option name 'Guest DHCP'
+    option src 'guest'
+    option src_port '67-68'
+    option dest_port '67-68'
+    option proto 'udp'
+    option target 'ACCEPT'
+  ```
+
