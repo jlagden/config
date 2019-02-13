@@ -55,6 +55,30 @@
   * https://openwrt.org/docs/guide-user/perf_and_log/statistical.data.overview
 * https://github.com/apollo-ng/luci-theme-darkmatter
 * Guest WiFI
+  * /etc/config/wireless
+  ```
+  config wifi-iface
+       option device     '???'
+       option mode       'ap'
+       option network    'guest'
+       option ssid       'guest'
+       option encryption 'none'
+  ```  
+  * /etc/config/network
+  ```
+  config interface 'guest'
+       option proto 'static'
+       option ipaddr '192.168.2.1'
+       option netmask '255.255.255.0'
+  ```
+  * /etc/config/dhcp
+  ```
+  config dhcp 'guest'
+    option interface 'guest'
+    option start '50'
+    option limit '200'
+    option leasetime '1h'
+  ```
   * /etc/config/firewall settings
   ```
   # Allow DNS Guest -> Router
