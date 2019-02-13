@@ -40,15 +40,8 @@
 * Upstream DNS Servers
   * LAN - Cloudfare - 1.1.1.1, 1.0.0.1
   * Guest Wifi - OpenDNS Family shield - 208.67.222.123, 208.67.220.123
-* dyndns https://openwrt.org/docs/guide-user/base-system/ddns
-* openvpn
-* collectd
-  * https://openwrt.org/docs/guide-user/perf_and_log/statistic.collectd
-  * https://openwrt.org/docs/guide-user/perf_and_log/statistic.rrdcollect
-  * https://openwrt.org/docs/guide-user/perf_and_log/statistic.rrdtool
-  * https://openwrt.org/docs/guide-user/perf_and_log/statistical.data.overview
-* https://github.com/apollo-ng/luci-theme-darkmatter
-* Guest WiFI
+  
+## Guest WiFI
   * /etc/config/wireless
   ```
   config wifi-iface
@@ -98,3 +91,12 @@
     option target 'ACCEPT'
   ```
 
+
+* dyndns https://openwrt.org/docs/guide-user/base-system/ddns
+* openvpn
+* collectd
+  * https://openwrt.org/docs/guide-user/perf_and_log/statistic.collectd
+  * https://openwrt.org/docs/guide-user/perf_and_log/statistic.rrdcollect
+  * https://openwrt.org/docs/guide-user/perf_and_log/statistic.rrdtool
+  * https://openwrt.org/docs/guide-user/perf_and_log/statistical.data.overview
+* https://github.com/apollo-ng/luci-theme-darkmatter
