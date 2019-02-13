@@ -61,8 +61,10 @@
        option device     '???'
        option mode       'ap'
        option network    'guest'
-       option ssid       'guest'
-       option encryption 'none'
+       option ssid 'Guest Wifi'
+       option encryption 'psk2+ccmp'
+       option key 'GuestWifiKey'
+       option isolate '1'
   ```  
   * /etc/config/network
   ```
