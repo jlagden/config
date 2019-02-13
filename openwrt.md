@@ -1,6 +1,6 @@
 * Reduce transmit power on wireless networks
 * https://openwrt.org/docs/guide-user/dns-request-hijacking
-* DHCP
+## DHCP
   * Main dhcp options can be left as default:
   ```
   config 'dnsmasq'
