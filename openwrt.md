@@ -71,6 +71,17 @@
   ```
   * `/etc/config/firewall` settings
   ```
+  config zone                                     
+    option name 'guest'                 
+    option network 'guest'
+    option input 'REJECT'        
+    option forward 'REJECT'             
+    option output 'ACCEPT'              
+       
+  config forwarding                               
+    option src 'guest'                  
+    option dest 'wan'
+    
   # Allow DNS Guest -> Router
   # Client DNS queries originate from dynamic UDP ports (>1023) 
   config rule
