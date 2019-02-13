@@ -41,8 +41,8 @@
   * LAN - Cloudfare - 1.1.1.1, 1.0.0.1
   * Guest Wifi - OpenDNS Family shield - 208.67.222.123, 208.67.220.123
   
-## Guest WiFI
-  * /etc/config/wireless
+## Guest WiFi
+  * `/etc/config/wireless`
   ```
   config wifi-iface
        option device     '???'
@@ -53,14 +53,14 @@
        option key 'GuestWifiKey'
        option isolate '1'
   ```  
-  * /etc/config/network
+  * `/etc/config/network`
   ```
   config interface 'guest'
        option proto 'static'
        option ipaddr '192.168.2.1'
        option netmask '255.255.255.0'
   ```
-  * /etc/config/dhcp
+  * `/etc/config/dhcp`
   ```
   config dhcp 'guest'
     option interface	'guest'
@@ -69,7 +69,7 @@
     option leasetime	'1h'
     list   dhcp_option	'6,208.67.222.123,208.67.220.123'
   ```
-  * /etc/config/firewall settings
+  * `/etc/config/firewall` settings
   ```
   # Allow DNS Guest -> Router
   # Client DNS queries originate from dynamic UDP ports (>1023) 
@@ -90,8 +90,6 @@
     option proto 'udp'
     option target 'ACCEPT'
   ```
-
-
 * dyndns https://openwrt.org/docs/guide-user/base-system/ddns
 * openvpn
 * collectd
