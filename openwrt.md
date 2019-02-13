@@ -28,13 +28,6 @@
 	option limit		'150'
 	option leasetime	'12h'
 	list   dhcp_option	'6,192.168.1.2,192.168.1.1'
-	
-  config dhcp 'guest'
-	option interface	'guest'
-	option start		'100'
-	option limit		'150'
-	option leasetime	'2h'
-	list   dhcp_option	'6,208.67.222.123,208.67.220.123'
   ```
   * Configure static leases
   ```
@@ -76,10 +69,11 @@
   * /etc/config/dhcp
   ```
   config dhcp 'guest'
-    option interface 'guest'
-    option start '50'
-    option limit '200'
-    option leasetime '1h'
+    option interface	'guest'
+    option start		'100'
+    option limit		'150'
+    option leasetime	'1h'
+    list   dhcp_option	'6,208.67.222.123,208.67.220.123'
   ```
   * /etc/config/firewall settings
   ```
