@@ -1,5 +1,5 @@
+## Wireless
 * Reduce transmit power on wireless networks
-* https://openwrt.org/docs/guide-user/dns-request-hijacking
 ## DHCP
   * Main dhcp options can be left as default:
   ```
@@ -36,8 +36,9 @@
         option mac      '00:11:22:33:44:55'
         option name     'mypc'
   ```
+## DNS
 * Upstream DNS Servers
-  * LAN- Cloudfare - 1.1.1.1, 1.0.0.1
+  * LAN - Cloudfare - 1.1.1.1, 1.0.0.1
   * Guest Wifi - OpenDNS Family shield - 208.67.222.123, 208.67.220.123
 * dyndns https://openwrt.org/docs/guide-user/base-system/ddns
 * openvpn
