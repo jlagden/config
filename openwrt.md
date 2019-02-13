@@ -20,7 +20,7 @@
 	  option resolvfile		'/tmp/resolv.conf.auto'
 	  option localservice		'1'
   ```
-  * DHCP Pools - Remove ra and dhcpv6 options, dhcp options to return pi-hole as DNS server
+  * Dhcp pools - remove ra and dhcpv6 options, dhcp options to return pi-hole as DNS server and openwrt as secondary
   ```
   config dhcp 'lan'
 	option interface	'lan'
