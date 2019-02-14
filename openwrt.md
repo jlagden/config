@@ -3,7 +3,7 @@
 
 `/etc/config/wireless`
 ```
-config 'wifi-device' '???'
+config wifi-device 'radio0'
   option txpower    '15'
 ```
 ## DHCP
