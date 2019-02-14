@@ -119,9 +119,4 @@ config 'wifi-device' '???'
   ```
 * dyndns https://openwrt.org/docs/guide-user/base-system/ddns
 * openvpn
-* collectd
-  * https://openwrt.org/docs/guide-user/perf_and_log/statistic.collectd
-  * https://openwrt.org/docs/guide-user/perf_and_log/statistic.rrdcollect
-  * https://openwrt.org/docs/guide-user/perf_and_log/statistic.rrdtool
-  * https://openwrt.org/docs/guide-user/perf_and_log/statistical.data.overview
 * https://github.com/apollo-ng/luci-theme-darkmatter
