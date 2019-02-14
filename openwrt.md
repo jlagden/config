@@ -117,6 +117,8 @@ config 'wifi-device' '???'
     option proto 'all'
     option target 'REJECT'
   ```
-* dyndns https://openwrt.org/docs/guide-user/base-system/ddns
-* openvpn
+## Dynamic DNS 
+* https://openwrt.org/docs/guide-user/base-system/ddns
+## VPN
+## Themes
 * https://github.com/apollo-ng/luci-theme-darkmatter
