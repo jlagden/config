@@ -85,7 +85,7 @@
   # Allow DNS Guest -> Router
   # Client DNS queries originate from dynamic UDP ports (>1023) 
   config rule
-    option name 'Guest DNS'
+    option name 'Guest-DNS'
     option src 'guest'
     option dest_port '53'
     option proto 'tcp udp'
@@ -94,12 +94,22 @@
   # Allow DHCP Guest -> Router
   # DHCP communication uses UDP ports 67-68
   config rule
-    option name 'Guest DHCP'
+    option name 'Guest-DHCP'
     option src 'guest'
     option src_port '67-68'
     option dest_port '67-68'
     option proto 'udp'
     option target 'ACCEPT'
+    
+  # Don't allow access to the cable modem
+  config rule
+    option name 'Guest-Block-Cable-Modem'
+    option src 'guest'
+    option dest 'wan'
+    option dest_ip '192.168.100.1'
+    option family 'ipv4'
+    option proto 'all'
+    option target 'REJECT'
   ```
 * dyndns https://openwrt.org/docs/guide-user/base-system/ddns
 * openvpn
