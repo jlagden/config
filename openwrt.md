@@ -1,5 +1,5 @@
 ## Wireless
-* Reduce transmit power on wireless networks to 15
+* Reduce transmit power on wireless networks to 15dBm
 
 `/etc/config/wireless`
 ```
