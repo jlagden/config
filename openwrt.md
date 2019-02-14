@@ -43,8 +43,12 @@ config wifi-device 'radio0'
         option name     'mypc'
   ```
 ## DNS
-* Upstream DNS Servers
-  * LAN - Cloudfare - 1.1.1.1, 1.0.0.1
+* Upstream DNS Servers - Cloudfare - 1.1.1.1, 1.0.0.1
+  `/etc/config/network`
+  ```
+  config interface 'wan'
+    option dns '1.1.1.1 1.0.0.1'
+  ```
   * Guest Wifi - OpenDNS Family shield - 208.67.222.123, 208.67.220.123
   
 ## Guest WiFi
