@@ -44,10 +44,23 @@ config wifi-device 'radio0'
   ```
 ## DNS
 * Upstream DNS Servers - Cloudfare - 1.1.1.1, 1.0.0.1
+
   `/etc/config/network`
   ```
   config interface 'wan'
     option dns '1.1.1.1 1.0.0.1'
+  ```
+  * DNS request hijacking (Google likes to do their own thing)
+  `/etc/config/firewall`
+  ```
+  config redirect
+        option name 'DNS LAN redirect'
+        option src 'lan'
+        option src_dport '53'
+        option dest_port '53'
+        option target 'DNAT'
+        option proto 'udp'
+        option dest 'lan'
   ```
   * Guest Wifi - OpenDNS Family shield - 208.67.222.123, 208.67.220.123
   
