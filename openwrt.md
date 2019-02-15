@@ -7,62 +7,63 @@ config wifi-device 'radio0'
   option txpower    '15'
 ```
 ## DHCP
-  * Main dhcp options can be left as default:
-  ```
-  config 'dnsmasq'
-	  option domainneeded		'1'
-	  option boguspriv		'1'
-	  option filterwin2k		'0'
-	  option localise_queries	'1'
-	  option rebind_protection	'1'
-	  option rebind_localhost	'1'
-	  option local		'/lan/'
-	  option domain		'lan'
-	  option expandhosts		'1'
-	  option nonegcache		'0'
-	  option authoritative	'1'
-	  option readethers		'1'
-	  option leasefile		'/tmp/dhcp.leases'
-	  option resolvfile		'/tmp/resolv.conf.auto'
-	  option localservice		'1'
-  ```
-  * dhcp pools - remove ra and dhcpv6 options, dhcp options to return pi-hole as DNS server and openwrt as secondary
-  ```
-  config dhcp 'lan'
+* Main dhcp options can be left as default:
+```
+config 'dnsmasq'
+	option domainneeded		'1'
+	option boguspriv		'1'
+	option filterwin2k		'0'
+	option localise_queries	'1'
+	option rebind_protection	'1'
+	option rebind_localhost	'1'
+	option local		'/lan/'
+	option domain		'lan'
+	option expandhosts		'1'
+	option nonegcache		'0'
+	option authoritative	'1'
+	option readethers		'1'
+	option leasefile		'/tmp/dhcp.leases'
+	option resolvfile		'/tmp/resolv.conf.auto'
+	option localservice		'1'
+```
+* dhcp pools - remove ra and dhcpv6 options, dhcp options to return pi-hole as DNS server and openwrt as secondary
+```
+config dhcp 'lan'
 	option interface	'lan'
 	option start		'100'
 	option limit		'150'
 	option leasetime	'12h'
 	list   dhcp_option	'6,192.168.1.2,192.168.1.1'
-  ```
-  * Configure static leases
-  ```
-  config host
-        option ip       '192.168.1.3'
-        option mac      '00:11:22:33:44:55'
-        option name     'mypc'
-  ```
+```
+* Configure static leases
+```
+config host
+      option ip       '192.168.1.3'
+      option mac      '00:11:22:33:44:55'
+      option name     'mypc'
+```
 ## DNS
 * Upstream DNS Servers - Cloudfare - 1.1.1.1, 1.0.0.1
 
-  `/etc/config/network`
-  ```
-  config interface 'wan'
-    option dns '1.1.1.1 1.0.0.1'
-  ```
-  * DNS request hijacking (Google likes to do their own thing)
-  `/etc/config/firewall`
-  ```
-  config redirect
-        option name 'DNS LAN redirect'
-        option src 'lan'
-        option src_dport '53'
-        option dest_port '53'
-        option target 'DNAT'
-        option proto 'udp'
-        option dest 'lan'
-  ```
-  * Guest Wifi - OpenDNS Family shield - 208.67.222.123, 208.67.220.123
+`/etc/config/network`
+```
+config interface 'wan'
+  option dns '1.1.1.1 1.0.0.1'
+```
+* DNS request hijacking (Google likes to do their own thing)
+
+`/etc/config/firewall`
+```
+config redirect
+      option name 'DNS LAN redirect'
+      option src 'lan'
+      option src_dport '53'
+      option dest_port '53'
+      option target 'DNAT'
+      option proto 'udp'
+      option dest 'lan'
+```
+* Guest Wifi - OpenDNS Family shield - 208.67.222.123, 208.67.220.123
   
 ## Guest WiFi
   `/etc/config/wireless`
