@@ -61,7 +61,7 @@ config redirect
       option dest_ip '192.168.1.2'
       option target 'DNAT'
       option proto 'udp'
-      option dest 'lan'
+      option dest 'wan'
 ```
 * Guest Wifi - OpenDNS Family shield - 208.67.222.123, 208.67.220.123
   
