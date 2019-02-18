@@ -3,8 +3,8 @@
 
 `/etc/config/wireless`
 ```
-config wifi-device 'radio0'
-  option txpower    '15'
+config wifi-device '???'
+	option txpower    '15'
 ```
 ## DHCP
 * Main dhcp options can be left as default:
