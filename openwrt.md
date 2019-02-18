@@ -63,8 +63,6 @@ config redirect
       option proto 'udp'
       option dest 'wan'
 ```
-* Guest Wifi - OpenDNS Family shield - 208.67.222.123, 208.67.220.123
-  
 ## Guest WiFi
   `/etc/config/wireless`
   ```
@@ -84,6 +82,7 @@ config redirect
        option ipaddr '192.168.2.1'
        option netmask '255.255.255.0'
   ```
+  * Guest Wifi use OpenDNS Family shield for DNS - 208.67.222.123, 208.67.220.123
   `/etc/config/dhcp`
   ```
   config dhcp 'guest'
