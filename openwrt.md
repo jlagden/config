@@ -38,9 +38,9 @@ config dhcp 'lan'
 * Configure static leases
 ```
 config host
-      option ip       '192.168.1.3'
-      option mac      '00:11:22:33:44:55'
-      option name     'mypc'
+	option ip       '192.168.1.3'
+	option mac      '00:11:22:33:44:55'
+	option name     'mypc'
 ```
 ## DNS
 * Upstream DNS Servers - Cloudfare - 1.1.1.1, 1.0.0.1
@@ -104,16 +104,7 @@ config redirect
   config forwarding                               
     option src 'guest'                  
     option dest 'wan'
-    
-  # Allow DNS Guest -> Router
-  # Client DNS queries originate from dynamic UDP ports (>1023) 
-  config rule
-    option name 'Guest-DNS'
-    option src 'guest'
-    option dest_port '53'
-    option proto 'tcp udp'
-    option target 'ACCEPT'
-    
+       
   # Allow DHCP Guest -> Router
   # DHCP communication uses UDP ports 67-68
   config rule
