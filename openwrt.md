@@ -4,7 +4,7 @@
 `/etc/config/wireless`
 ```
 config wifi-device '???'
-	option txpower    '15'
+	option txpower	'15'
 ```
 ## DHCP
 * Main dhcp options can be left as default:
@@ -13,14 +13,14 @@ config 'dnsmasq'
 	option domainneeded		'1'
 	option boguspriv		'1'
 	option filterwin2k		'0'
-	option localise_queries	'1'
+	option localise_queries		'1'
 	option rebind_protection	'1'
-	option rebind_localhost	'1'
-	option local		'/lan/'
-	option domain		'lan'
+	option rebind_localhost		'1'
+	option local			'/lan/'
+	option domain			'lan'
 	option expandhosts		'1'
 	option nonegcache		'0'
-	option authoritative	'1'
+	option authoritative		'1'
 	option readethers		'1'
 	option leasefile		'/tmp/dhcp.leases'
 	option resolvfile		'/tmp/resolv.conf.auto'
