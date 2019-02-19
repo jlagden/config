@@ -46,7 +46,8 @@ config host
 `/etc/config/network`
 ```
 config interface 'wan'
-  option dns '1.1.1.1 1.0.0.1'
+	option peerdns '0'
+  	option dns '1.1.1.1 1.0.0.1'
 ```
 * DNS request hijacking (Google likes to do their own thing)
 
