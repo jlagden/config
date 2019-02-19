@@ -69,6 +69,7 @@ config interface 'wan'
        option netmask '255.255.255.0'
   ```
   * Guest Wifi use OpenDNS Family shield for DNS - 208.67.222.123, 208.67.220.123
+  
   `/etc/config/dhcp`
   ```
   config dhcp 'guest'
@@ -113,5 +114,3 @@ config interface 'wan'
 ## Dynamic DNS 
 * https://openwrt.org/docs/guide-user/base-system/ddns
 ## VPN
-## Themes
-* https://github.com/apollo-ng/luci-theme-darkmatter
