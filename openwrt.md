@@ -66,11 +66,11 @@ config redirect
   `/etc/config/wireless`
   ```
   config wifi-iface
-       option device     '???'
-       option mode       'ap'
-       option network    'guest'
-       option ssid 'Guest Wifi'
-       option encryption 'psk2+ccmp'
+       option device '???'
+       option mode 'ap'
+       option network 'guest'
+       option ssid 'Guest'
+       option encryption 'psk2'
        option key 'GuestWifiKey'
        option isolate '1'
   ```  
@@ -85,11 +85,11 @@ config redirect
   `/etc/config/dhcp`
   ```
   config dhcp 'guest'
-    option interface	'guest'
-    option start		'100'
-    option limit		'150'
-    option leasetime	'1h'
-    list   dhcp_option	'6,208.67.222.123,208.67.220.123'
+    	option interface 'guest'
+    	option start '100'
+    	option limit '150'
+    	option leasetime '1h'
+    	list dhcp_option '6,208.67.222.123,208.67.220.123'
   ```
   `/etc/config/firewall`
   ```
