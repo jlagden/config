@@ -49,19 +49,6 @@ config interface 'wan'
 	option peerdns '0'
   	option dns '1.1.1.1 1.0.0.1'
 ```
-* DNS request hijacking (Google likes to do their own thing)
-
-`/etc/config/firewall`
-```
-config redirect
-      option name 'DNS LAN redirect'
-      option src 'lan'
-      option src_dport '53'
-      option dest_ip '192.168.1.2'
-      option target 'DNAT'
-      option proto 'udp'
-      option dest 'wan'
-```
 ## Guest WiFi
   `/etc/config/wireless`
   ```
