@@ -94,35 +94,34 @@ config redirect
   `/etc/config/firewall`
   ```
   config zone                                     
-    option name 'guest'                 
-    option network 'guest'
-    option input 'REJECT'        
-    option forward 'REJECT'             
-    option output 'ACCEPT'              
+    	option name 'guest'                 
+    	option network 'guest'
+    	option input 'REJECT'        
+    	option forward 'REJECT'             
+    	option output 'ACCEPT'              
        
   config forwarding                               
-    option src 'guest'                  
-    option dest 'wan'
+    	option src 'guest'                  
+   	option dest 'wan'
        
   # Allow DHCP Guest -> Router
   # DHCP communication uses UDP ports 67-68
   config rule
-    option name 'Guest-DHCP'
-    option src 'guest'
-    option src_port '67-68'
-    option dest_port '67-68'
-    option proto 'udp'
-    option target 'ACCEPT'
+    	option name 'Allow-Guest-DHCP'
+    	option src 'guest'
+    	option dest_port '67-68'
+    	option proto 'udp'
+    	option target 'ACCEPT'
     
   # Don't allow access to the cable modem
   config rule
-    option name 'Guest-Block-Cable-Modem'
-    option src 'guest'
-    option dest 'wan'
-    option dest_ip '192.168.100.1'
-    option family 'ipv4'
-    option proto 'all'
-    option target 'REJECT'
+    	option name 'Deny-Guest-Cable-Modem'
+    	option src 'guest'
+    	option dest 'wan'
+    	option dest_ip '192.168.100.1'
+    	option family 'ipv4'
+    	option proto 'all'
+    	option target 'REJECT'
   ```
 ## Dynamic DNS 
 * https://openwrt.org/docs/guide-user/base-system/ddns
