@@ -114,3 +114,8 @@ config interface 'wan'
 ## Dynamic DNS 
 * https://openwrt.org/docs/guide-user/base-system/ddns
 ## VPN
+* Install Easy-RSA
+```
+opkg update
+opkg install openvpn-easy-rsa
+```
