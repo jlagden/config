@@ -141,3 +141,12 @@ easyrsa --batch build-server-full vpnserver nopass
 # Generate a keypair and sign locally for vpnclient
 easyrsa --batch build-client-full vpnclient nopass
 ```
+
+https://openvpn.net/community-resources/how-to/#openvpn-quickstart
+https://openwrt.org/docs/guide-user/services/vpn/openvpn/basic
+https://github.com/OpenVPN/easy-rsa/blob/master/README.quickstart.md
+https://wiki.gentoo.org/wiki/Create_a_Public_Key_Infrastructure_Using_the_easy-rsa_Scripts
+https://wiki.archlinux.org/index.php/Easy-RSA
+https://github.com/pivpn/easy-rsa/blob/master/doc/EasyRSA-Readme.md
+https://community.openvpn.net/openvpn/wiki/EasyRSA3-OpenVPN-Howto
+https://github.com/OpenVPN/easy-rsa/blob/master/easyrsa3/easyrsa
