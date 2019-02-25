@@ -150,3 +150,47 @@ easyrsa --batch build-client-full vpnclient nopass
 * https://github.com/pivpn/easy-rsa/blob/master/doc/EasyRSA-Readme.md
 * https://community.openvpn.net/openvpn/wiki/EasyRSA3-OpenVPN-Howto
 * https://github.com/OpenVPN/easy-rsa/blob/master/easyrsa3/easyrsa
+
+```
+verb 3
+user nobody
+group nogroup
+dev vpn
+port 1194
+proto udp
+server 10.8.0.0 255.255.255.0
+topology subnet
+persist-tun
+persist-key
+push "route 192.168.1.0 255.255.255.0"
+push "dhcp-option DNS 192.168.1.2"
+push "dhcp-option DNS 192.168.1.1"
+push "dhcp-option DOMAIN lan"
+push "redirect-gateway def1"
+push "persist-tun"
+push "persist-key"
+cipher AES-256-CBC
+dh /etc/openvpn/dh.pem
+tls-crypt /etc/openvpn/ta.key
+ca /etc/openvpn/ca.crt
+cert /etc/openvpn/my-client.crt
+key /etc/openvpn/my-client.key
+```
+
+```
+dev tun
+proto udp
+
+log openvpn.log
+verb 3
+
+ca /etc/openvpn/ca.crt
+tls-crypt /etc/openvpn/ta.key
+cert /etc/openvpn/my-client.crt
+key /etc/openvpn/my-client.key
+
+client
+remote-cert-tls server
+remote *** 1194
+```
+
