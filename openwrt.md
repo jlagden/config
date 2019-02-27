@@ -194,3 +194,5 @@ remote-cert-tls server
 remote *** 1194
 ```
 
+http://glr81.free.fr/pages/openwrt-snmp-oid.htm#scripts
+https://forums.openvpn.net/viewtopic.php?t=8279
