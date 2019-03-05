@@ -142,57 +142,32 @@ easyrsa --batch build-server-full vpnserver nopass
 easyrsa --batch build-client-full vpnclient nopass
 ```
 
-* https://openvpn.net/community-resources/how-to/#openvpn-quickstart
-* https://openwrt.org/docs/guide-user/services/vpn/openvpn/basic
-* https://github.com/OpenVPN/easy-rsa/blob/master/README.quickstart.md
-* https://wiki.gentoo.org/wiki/Create_a_Public_Key_Infrastructure_Using_the_easy-rsa_Scripts
-* https://wiki.archlinux.org/index.php/Easy-RSA
-* https://github.com/pivpn/easy-rsa/blob/master/doc/EasyRSA-Readme.md
-* https://community.openvpn.net/openvpn/wiki/EasyRSA3-OpenVPN-Howto
-* https://github.com/OpenVPN/easy-rsa/blob/master/easyrsa3/easyrsa
 
 ```
-verb 3
-user nobody
-group nogroup
-dev vpn
-port 1194
-proto udp
-server 10.8.0.0 255.255.255.0
-topology subnet
-persist-tun
-persist-key
-push "route 192.168.1.0 255.255.255.0"
-push "dhcp-option DNS 192.168.1.2"
-push "dhcp-option DNS 192.168.1.1"
-push "dhcp-option DOMAIN lan"
-push "redirect-gateway def1"
-push "persist-tun"
-push "persist-key"
-cipher AES-256-CBC
-dh /etc/openvpn/dh.pem
-tls-crypt /etc/openvpn/ta.key
-ca /etc/openvpn/ca.crt
-cert /etc/openvpn/my-client.crt
-key /etc/openvpn/my-client.key
+config openvpn 'vpn'
+	option enabled '1'
+	option verb '3'
+	option user 'nobody'
+	option group 'nogroup'
+	option dev 'tun'
+	option port '1194'
+	option proto 'udp4'
+	option server '10.8.0.0 255.255.255.0'
+	option topology 'subnet'
+	option persist_tun '1'
+	option persist_key '1'
+	list push 'route 192.168.1.0 255.255.255.0'
+	list push 'dhcp-option DNS 192.168.1.2'
+	list push 'dhcp-option DNS 192.168.1.1'
+	list push 'redirect-gateway def1'
+	list push 'persist-tun'
+	list push 'persist-key'
+	option keepalive '10 120'
+	option ca '/etc/openvpn/ca.crt'
+	option cert '/etc/openvpn/vpn-server.crt'
+	option key '/etc/openvpn/vpn-server.key'
+	option dh '/etc/openvpn/dh.pem'
+	option tls_crypt '/etc/openvpn/tc.key'
+	option cipher 'AES-256-CBC'
+	option fragment '1400'
 ```
-
-```
-dev tun
-proto udp
-
-log openvpn.log
-verb 3
-
-ca /etc/openvpn/ca.crt
-tls-crypt /etc/openvpn/ta.key
-cert /etc/openvpn/my-client.crt
-key /etc/openvpn/my-client.key
-
-client
-remote-cert-tls server
-remote *** 1194
-```
-
-http://glr81.free.fr/pages/openwrt-snmp-oid.htm#scripts
-https://forums.openvpn.net/viewtopic.php?t=8279
