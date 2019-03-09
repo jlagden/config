@@ -113,6 +113,16 @@ config interface 'wan'
   ```
 ## Dynamic DNS 
 * https://openwrt.org/docs/guide-user/base-system/ddns
+```
+config service 'myddns_ipv4'
+	option interface 'wan'
+	option ip_source 'network'
+	option ip_network 'wan'
+	option service_name 'afraid.org-keyauth'
+	option enabled '1'
+	option lookup_host '???'
+	option password '???'
+```
 ## VPN
 * Install Easy-RSA
 ```
