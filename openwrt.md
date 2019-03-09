@@ -227,4 +227,6 @@ config collectd_network_server
         option port '25826'
         option host '192.168.1.2'
 ```
+## Misc
 
+* Turn off "Use builtin IPv6-management " for all interfaces
