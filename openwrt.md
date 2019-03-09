@@ -210,7 +210,7 @@ config forwarding 'vpn_forwarding_wan'
         option dest 'wan'
 ```
 
-##Collectd
+## Collectd
 
 Enabled plugins cpu,memory.network,thermal,uptime
 Added network plugin settings
