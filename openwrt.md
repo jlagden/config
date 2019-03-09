@@ -210,3 +210,21 @@ config forwarding 'vpn_forwarding_wan'
         option dest 'wan'
 ```
 
+##Collectd
+
+Enabled plugins cpu,memory.network,thermal,uptime
+Added network plugin settings
+
+`/etc/config/luci_statistics`
+
+```
+
+config statistics 'collectd_network'
+        option enable '1'
+        option Forward '0'
+
+config collectd_network_server
+        option port '25826'
+        option host '192.168.1.2'
+```
+
