@@ -181,3 +181,32 @@ config openvpn 'vpn'
 	option cipher 'AES-256-CBC'
 	option fragment '1400'
 ```
+```
+config rule
+        option name 'Allow-OpenVPN-Inbound'
+        option target 'ACCEPT'
+        option src 'wan'
+        option proto 'udp'
+        option dest_port '1194'
+
+config zone 'vpn'
+        option name 'vpn'
+        option network 'vpn'
+        option input 'ACCEPT'
+        option forward 'REJECT'
+        option output 'ACCEPT'
+        option masq '1'
+
+config forwarding 'vpn_forwarding_lan_in'
+        option src 'vpn'
+        option dest 'lan'
+
+config forwarding 'vpn_forwarding_lan_out'
+        option src 'lan'
+        option dest 'vpn'
+
+config forwarding 'vpn_forwarding_wan'
+        option src 'vpn'
+        option dest 'wan'
+```
+
