@@ -142,7 +142,7 @@ opkg install openvpn-easy-rsa
 ```
 * OpenWRT has a good guide on creating the key pairs so will use this. 
 * **EASYRSA_PKI** is the **PKI** directory, **EASYRSA_REQ_CN** is the Certificate Authority Common Name. 
-* **vpnserver** is the servers common name and **vpnclient** is the client's common name.
+* **vpn-server** is the servers common name and **vpn-client1** is the client's common name.
 ```
 export EASYRSA_PKI="/etc/easy-rsa/pki"
 export EASYRSA_REQ_CN="vpnca"
@@ -159,13 +159,13 @@ easyrsa --batch gen-dh
 ```
 easyrsa --batch build-ca nopass
 ```
-* Generate a keypair and sign locally for vpnserver
+* Generate a keypair and sign locally for vpn-server
 ```
-easyrsa --batch build-server-full vpnserver nopass
+easyrsa --batch build-server-full vpn-server nopass
 ```
-* Generate a keypair and sign locally for vpnclient
+* Generate a keypair and sign locally for vpn-client1
 ```
-easyrsa --batch build-client-full vpnclient nopass
+easyrsa --batch build-client-full vpn-client1 nopass
 ```
 
 ```
