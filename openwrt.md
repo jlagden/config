@@ -231,12 +231,11 @@ config collectd_network_server
 
 * Turn off "Use builtin IPv6-management " for all interfaces
 	
-* turn off ipv6 support for current session
+* Turn off ipv6 support for current session and preserve change across reboots
 ```
 sysctl -w net.ipv6.conf.all.disable_ipv6=1
 sysctl -w net.ipv6.conf.default.disable_ipv6 = 1
 ```
-* preserve change across reboots
 `/etc/sysctl.conf`
 
 ```
