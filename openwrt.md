@@ -229,7 +229,7 @@ config collectd_network_server
 ```
 ## Misc
 
-* Turn off "Use builtin IPv6-management " for all interfaces
+* Turn off "**Use builtin IPv6-management**" for all interfaces
 	
 * Turn off ipv6 support for current session and preserve change across reboots
 ```
