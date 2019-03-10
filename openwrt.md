@@ -120,7 +120,9 @@ config interface 'wan'
     	option target 'REJECT'
   ```
 ## Dynamic DNS 
-* https://openwrt.org/docs/guide-user/base-system/ddns
+* Install ca-certificates so https works, password is the update.php key
+
+`/etc/config/ddns`
 ```
 config service 'myddns_ipv4'
 	option interface 'wan'
@@ -129,7 +131,8 @@ config service 'myddns_ipv4'
 	option service_name 'afraid.org-keyauth'
 	option enabled '1'
 	option lookup_host '???'
-	option password '???'
+	option password '???
+	option use_https '1'
 ```
 ## VPN
 * Install Easy-RSA
