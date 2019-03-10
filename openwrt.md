@@ -8,6 +8,8 @@ config wifi-device '???'
 ```
 ## DHCP
 * Main dhcp options can be left as default:
+
+`/etc/config/dhcp`
 ```
 config dnsmasq
 	option domainneeded '1'
@@ -25,6 +27,8 @@ config dnsmasq
 	option localservice '1'
 ```
 * Dhcp pools - remove ra and dhcpv6 options, dhcp options to return pi-hole as DNS server and openwrt as secondary
+
+`/etc/config/dhcp`
 ```
 config dhcp 'lan'
 	option interface 'lan'
@@ -34,6 +38,8 @@ config dhcp 'lan'
 	list dhcp_option '6,192.168.1.2,192.168.1.1'
 ```
 * Configure static leases
+
+`/etc/config/dhcp`
 ```
 config host
 	option name 'mypc'
