@@ -177,6 +177,7 @@ opkg install openvpn-openssl
 EASYRSA_PKI="/etc/easy-rsa/pki"
 openvpn --genkey --secret "${EASYRSA_PKI}/tc.key"
 ```
+`/etc/config/openvpn`
 ```
 config openvpn 'vpn'
 	option enabled '1'
@@ -205,6 +206,7 @@ config openvpn 'vpn'
 	option cipher 'AES-256-CBC'
 	option fragment '1400'
 ```
+`/etc/config/firewall`
 ```
 config rule
         option name 'Allow-OpenVPN-Inbound'
