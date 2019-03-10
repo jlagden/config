@@ -140,7 +140,7 @@ config service 'myddns_ipv4'
 opkg update
 opkg install openvpn-easy-rsa
 ```
-* OpenWRT has a good guide on creating the key pairs so will use this. EASYRSA_PKI is the PKI directory, EASYRSA_REQ_CN is the Certificate Authority Common Name. vpnserver is the servers common name and vpnclient is the client's common name.
+* OpenWRT has a good guide on creating the key pairs so will use this. **EASYRSA_PKI** is the **PKI** directory, **EASYRSA_REQ_CN** is the Certificate Authority Common Name. **vpnserver** is the servers common name and **vpnclient** is the client's common name.
 ```
 # Configuration parameters
 export EASYRSA_PKI="/etc/easy-rsa/pki"
