@@ -167,7 +167,16 @@ easyrsa --batch build-server-full vpn-server nopass
 ```
 easyrsa --batch build-client-full vpn-client1 nopass
 ```
-
+* Install OpenVPN
+```
+opkg update
+opkg install openvpn-openssl
+```
+* Generate TLS PSL
+```
+EASYRSA_PKI="/etc/easy-rsa/pki"
+openvpn --genkey --secret "${EASYRSA_PKI}/tc.key"
+```
 ```
 config openvpn 'vpn'
 	option enabled '1'
