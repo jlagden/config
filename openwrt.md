@@ -24,7 +24,7 @@ config dnsmasq
 	option nonwildcard '1'
 	option localservice '1'
 ```
-* dhcp pools - remove ra and dhcpv6 options, dhcp options to return pi-hole as DNS server and openwrt as secondary
+* Dhcp pools - remove ra and dhcpv6 options, dhcp options to return pi-hole as DNS server and openwrt as secondary
 ```
 config dhcp 'lan'
 	option interface 'lan'
@@ -41,7 +41,7 @@ config host
 	option mac '00:11:22:33:44:55'
 ```
 ## DNS
-* Upstream DNS Servers - Cloudfare - 1.1.1.1, 1.0.0.1
+* Upstream DNS Servers - Use cloudfare - 1.1.1.1, 1.0.0.1
 
 `/etc/config/network`
 ```
