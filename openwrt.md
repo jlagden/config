@@ -85,6 +85,8 @@ config interface 'wan'
     	option leasetime '1h'
     	list dhcp_option '6,208.67.222.123,208.67.220.123'
   ```
+  * Setup firewall zone, forwardings and allow DHCP requests. Deny access to the Cable Modem IP
+  
   `/etc/config/firewall`
   ```
   config zone                                     
