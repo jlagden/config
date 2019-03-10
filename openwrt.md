@@ -144,27 +144,29 @@ opkg install openvpn-easy-rsa
 * **EASYRSA_PKI** is the **PKI** directory, **EASYRSA_REQ_CN** is the Certificate Authority Common Name. 
 * **vpnserver** is the servers common name and **vpnclient** is the client's common name.
 ```
-# Configuration parameters
 export EASYRSA_PKI="/etc/easy-rsa/pki"
 export EASYRSA_REQ_CN="vpnca"
- 
-# Remove and re-initialize the PKI directory
+```
+* Remove and re-initialize the PKI directory
+```
 easyrsa --batch init-pki
- 
-# Generate DH parameters
-# May take a while to complete (~25m on WRT3200ACM)
+```
+* Generate DH parameters
+```
 easyrsa --batch gen-dh
- 
-# Create a new CA
+```
+* Create a new CA
+```
 easyrsa --batch build-ca nopass
- 
-# Generate a keypair and sign locally for vpnserver
+```
+* Generate a keypair and sign locally for vpnserver
+```
 easyrsa --batch build-server-full vpnserver nopass
- 
-# Generate a keypair and sign locally for vpnclient
+```
+* Generate a keypair and sign locally for vpnclient
+```
 easyrsa --batch build-client-full vpnclient nopass
 ```
-
 
 ```
 config openvpn 'vpn'
