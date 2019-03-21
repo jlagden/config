@@ -238,8 +238,8 @@ config forwarding 'vpn_forwarding_wan'
 
 ## Collectd
 
-Enabled plugins cpu,memory.network,thermal,uptime
-Added network plugin settings
+* Enabled plugins cpu,memory,network,thermal,uptime
+* Added network plugin settings
 
 `/etc/config/luci_statistics`
 
