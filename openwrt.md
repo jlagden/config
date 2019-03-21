@@ -268,3 +268,14 @@ sysctl -w net.ipv6.conf.default.disable_ipv6 = 1
 net.ipv6.conf.all.disable_ipv6=1
 net.ipv6.conf.default.disable_ipv6 = 1
 ```
+* Configure subdomains
+`/etc/dnsmasq.conf.domains`
+```
+domain=wired.lan,192.168.1.0/24,local
+domain=guest.lan,192.168.2.0/24,local
+```
+Add this as an extra dnsmasq config file and add it to the list of files included in config backups (courtesy of https://www.middling.uk/blog/2015/03/customising-openwrt-to-my-needs/)
+```
+echo "conf-file=/etc/dnsmasq.conf.domains" >> /etc/dnsmasq.conf
+echo "/etc/dnsmasq.conf.domains" >> /etc/sysupgrade.conf
+```
