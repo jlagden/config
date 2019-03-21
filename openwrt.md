@@ -244,10 +244,9 @@ config forwarding 'vpn_forwarding_wan'
 `/etc/config/luci_statistics`
 
 ```
-
 config statistics 'collectd_network'
-        option enable '1'
-        option Forward '0'
+	option enable '1'
+	option Forward '0'
 
 config collectd_network_server
         option port '25826'
