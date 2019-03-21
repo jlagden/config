@@ -56,69 +56,69 @@ config interface 'wan'
   	option dns '1.1.1.1 1.0.0.1'
 ```
 ## Guest WiFi
-  `/etc/config/wireless`
-  ```
-  config wifi-iface
-       option device '???'
-       option mode 'ap'
-       option network 'guest'
-       option ssid 'Guest'
-       option encryption 'psk2'
-       option key 'GuestWifiKey'
-       option isolate '1'
-  ```  
-  `/etc/config/network`
-  ```
-  config interface 'guest'
-       option proto 'static'
-       option ipaddr '192.168.2.1'
-       option netmask '255.255.255.0'
-  ```
-  * Guest Wifi use OpenDNS Family shield for DNS - 208.67.222.123, 208.67.220.123
+`/etc/config/wireless`
+```
+config wifi-iface
+	option device '???'
+	option mode 'ap'
+	option network 'guest'
+	option ssid 'Guest'
+	option encryption 'psk2'
+	option key 'GuestWifiKey'
+	option isolate '1'
+```  
+`/etc/config/network`
+```
+config interface 'guest'
+	option proto 'static'
+	option ipaddr '192.168.2.1'
+	option netmask '255.255.255.0'
+```
+* Guest Wifi use OpenDNS Family shield for DNS - 208.67.222.123, 208.67.220.123
   
-  `/etc/config/dhcp`
-  ```
-  config dhcp 'guest'
-    	option interface 'guest'
+`/etc/config/dhcp`
+```
+config dhcp 'guest'
+	option interface 'guest'
     	option start '100'
     	option limit '150'
     	option leasetime '1h'
     	list dhcp_option '6,208.67.222.123,208.67.220.123'
-  ```
-  * Setup firewall zone, forwardings and allow DHCP requests. Deny access to the Cable Modem IP
+```
+* Setup firewall zone, forwardings and allow DHCP requests. Deny access to the Cable Modem IP
   
-  `/etc/config/firewall`
-  ```
-  config zone                                     
-    	option name 'guest'                 
-    	option network 'guest'
-    	option input 'REJECT'        
-    	option forward 'REJECT'             
-    	option output 'ACCEPT'              
+`/etc/config/firewall`
+```
+config zone                                     
+	option name 'guest'                 
+	option network 'guest'
+	option input 'REJECT'        
+	option forward 'REJECT'             
+	option output 'ACCEPT'              
        
-  config forwarding                               
-    	option src 'guest'                  
-   	option dest 'wan'
+config forwarding                               
+	option src 'guest'                  
+	option dest 'wan'
        
-  # Allow DHCP Guest -> Router
-  # DHCP communication uses UDP ports 67-68
-  config rule
-    	option name 'Allow-Guest-DHCP'
-    	option src 'guest'
-    	option dest_port '67-68'
-    	option proto 'udp'
-    	option target 'ACCEPT'
+# Allow DHCP Guest -> Router
+# DHCP communication uses UDP ports 67-68
+config rule
+	option name 'Allow-Guest-DHCP'
+	option src 'guest'
+	option dest_port '67-68'
+	option proto 'udp'
+	option target 'ACCEPT'
     
-  # Don't allow access to the cable modem
-  config rule
-    	option name 'Deny-Guest-Cable-Modem'
-    	option src 'guest'
-    	option dest 'wan'
-    	option dest_ip '192.168.100.1'
-    	option family 'ipv4'
-    	option proto 'all'
-    	option target 'REJECT'
-  ```
+# Don't allow access to the cable modem
+config rule
+	option name 'Deny-Guest-Cable-Modem'
+	option src 'guest'
+	option dest 'wan'
+	option dest_ip '192.168.100.1'
+ 	option family 'ipv4'
+	option proto 'all'
+	option target 'REJECT'
+```
 ## Dynamic DNS 
 * Install ca-certificates so https works, password is the update.php key
 
